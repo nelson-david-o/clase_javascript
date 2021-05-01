@@ -22,6 +22,7 @@ Son construcciones de la sintasis del codigo
 // Con let controlo que una variable sea unica
 // Con var puedo tener varias variables del mismo nombre
 
+/*
 let mensaje;
 mensaje = 'Hola Mundo'
 alert(mensaje)
@@ -29,7 +30,9 @@ alert(mensaje)
 let mensaje2;
 mensaje2 = 'Hola Mundo 2'
 alert(mensaje2)
+*/
 
+/*
 let a = 5;
 let b = 6;
 let suma = a + b;
@@ -41,6 +44,7 @@ let nombre2 = nombre;
 nombre2 = 'Carlos';
 console.log('El nombre uno es: ' ,nombre);
 console.log('El nombre dos es: ' ,nombre2);
+*/
 
 // Nombrar variables con camel case
 nombreUno = 'Roberto';
@@ -144,11 +148,11 @@ console.log(edad);
 // Es un valor especial que no pertence a ningún tipo de dato anterio.
 // El significado de undefined es valor no asignado.
 
-let edad_dos;
-console.log(edad_dos);
+//let edad_dos;
+//console.log(edad_dos);
 
 // El operador typeof o función typeof(x), devuelve el tipo de dato.
-
+/*
 console.log(typeof undefined); // undefined
 console.log(typeof 0); // numer
 console.log(typeof true); //Boolean
@@ -157,5 +161,74 @@ console.log(typeof "Hola"); //string
 console.log(typeof (alert)); //funcion **
 console.log(typeof null); // object - ERROR DE JAVASCRIPT
 console.log(typeof (Math)); //object
+*/
 
+// INteracciones: alert, prompt. confirm
 
+// alert
+
+// prompt
+
+//let nombre_n = prompt('Digite el nombre', 'Hola');
+//alert(nombre_n);
+
+//prompt('Digite el nombre');
+//prompt('Digite el nombre', '');
+
+// Confirm
+
+//let esHelado = confirm('¿Te gusta el helado?');
+//console.log(esHelado); // true si presiona ok y false si presioan cancelar
+
+// Conversión de tipos
+
+// Existen dos tipos de conversiones explícita e implícita
+
+// Convertir a String
+let valor = true;
+console.log(typeof valor);
+
+valor = String(valor); // true
+valor = String(false); // false
+valor = String(null); // null
+valor = String(undefined); // undefined
+console.log(valor); 
+console.log(typeof valor);
+
+// Convertir a Número
+
+// Conversiones nUmericas ocurren automaticamente en funciones matemáticas y expresiones
+
+// alert('6' / '2'); // 3
+
+let cadena = '123';
+let num_cad = Number(cadena); //123
+
+console.log(Number('hola')); //NaN
+
+/*
+undefined -> NaN
+null -> 0
+true -> 1
+false -> 0
+string '' -> 0
+string 'hola' -> NaN
+*/
+
+// Convertir a Booleano
+
+console.log(Boolean('hola'));
+
+/*
+undefined -> false
+null -> false
+string '' -> false
+NaN -> false
+0 -> false
+
+'0' -> true
+'  ' -> true
+*/
+
+console.log(Boolean(String(0)));
+console.log(Boolean(0));
