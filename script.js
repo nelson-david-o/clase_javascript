@@ -207,6 +207,7 @@ let num_cad = Number(cadena); //123
 console.log(Number('hola')); //NaN
 
 /*
+TABLA CONVERSION NÚMEROS
 undefined -> NaN
 null -> 0
 true -> 1
@@ -220,6 +221,7 @@ string 'hola' -> NaN
 console.log(Boolean('hola'));
 
 /*
+TABLA CONVERSION BOOLEANO
 undefined -> false
 null -> false
 string '' -> false
@@ -232,3 +234,178 @@ NaN -> false
 
 console.log(Boolean(String(0)));
 console.log(Boolean(0));
+
+// OPERADORES BÁSICOS
+
+//Operadores unarios y binarios
+
+/*
+let x, y, resultado;
+x = 5;
+y = 2;
+*/
+
+//Operadores binarios
+/*
+resultado = x + y;
+resultado = x - y;
+resultado = x * y;
+resultado = x / y;
+resultado = x % y; // mod
+resultado = x ** y; // potencia
+
+alert('1' + 2); // 12
+alert(1 + '2'); // 12
+
+alert(2 + 2 + '1'); //41
+alert('1' + 2 + 2); //122
+
+alert(2 - '1'); //1
+alert('6' / '2'); //3
+alert('6' / '2a'); //NaN
+*/
+
+// Operaciones Unaria +
+
+a = 1;
+console.log(+a);
+
+a = -1;
+console.log(+a);
+
+console.log(+true);
+console.log(+false);
+console.log(+NaN);
+console.log(+undefined);
+console.log(+null);
+
+// Operaciones Unaria -
+
+a = 1;
+console.log(-a);
+
+a = -1;
+console.log(-a);
+
+console.log(-true);
+console.log(-false);
+
+// ASIGNACIONES
+
+a = 2 + 3;
+a = b = c = 2 + 3;
+
+c = 2 + 3;
+b = c;
+a = b;
+
+c = 3 - (a = b + 1);
+
+// MODIFICADORES
+
+a = a +2;
+
+// COMPARACIONES
+
+console.log( 2 > 1); //true
+console.log( 2 == 1); //false
+console.log(2 != 1); //true
+
+let resu = 2 > 1;
+
+// Comparaciones entre cadenas
+
+console.log('Z' > 'A'); //true
+console.log('Show' > 'show'); //false
+console.log('casa' > 'casas'); //false
+console.log('a' > 'A');
+console.log('carro' > 'cerro');
+
+// 1. La letra minúscula es mayor que la mayúscula
+// 2. La palabra con más letras es mayor que la de menos letras
+
+// Comparación de diferentes tipos
+
+// Al comparar valores de diferentes tipos, JS convierte los valores a números
+// toda comparacion con NaN es falsa
+
+
+a = 0;
+b = '0';
+
+boleano_a = Boolean(a); //false
+boleano_b = Boolean(b); //true
+
+console.log(a == b);
+
+console.log('********');
+console.log('2' > 1); // true
+console.log('01' == 1); //true
+console.log(true > 0); //true
+console.log(false == 0); //true
+
+//NaN
+console.log('**** NaN ****');
+
+console.log('hola' > 0); //false
+console/log('hola' < 0); //false
+console/log('hola' == 0); //false
+
+// Undefined
+console.log('**** Undefined ****');
+
+console.log(undefined > 0); //false
+console.log(undefined < 0); //false
+
+// Null
+console.log('**** Null ****');
+
+console.log(null > 0); //false
+console.log(null < 0); //false
+console.log(null >= 0); //true
+
+console.log('**** Null y Undefined == ****');
+// el undefined y el null en las comparaciones de igualación no estrictas
+// actúan diferente: son iguales entre sí, pero no a ningún otro valor
+
+console.log(null == undefined); //true
+console.log(null == 5); //false
+console.log(undefined == 5); //false
+
+
+console.log('**** No diferencia de 0 de falso == ****');
+
+console.log(0 == false); //true
+console.log('' == false); //true
+
+// Igualación estricta
+
+console.log(0 === false); //false
+console.log(null === undefine); //false
+console.log(null == undefined); //true
+
+
+/*
+TABLA CONVERSION NÚMEROS
+undefined -> NaN
+null -> 0
+true -> 1
+false -> 0
+string '' -> 0
+string 'hola' -> NaN
+*/
+
+/*
+TABLA CONVERSION BOOLEANO
+undefined -> false
+null -> false
+string '' -> false
+NaN -> false
+0 -> false
+
+'0' -> true
+'  ' -> true
+*/
+
+
+// SENTENCIA IF
