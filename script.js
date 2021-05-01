@@ -348,8 +348,8 @@ console.log(false == 0); //true
 console.log('**** NaN ****');
 
 console.log('hola' > 0); //false
-console/log('hola' < 0); //false
-console/log('hola' == 0); //false
+console.log('hola' < 0); //false
+console.log('hola' == 0); //false
 
 // Undefined
 console.log('**** Undefined ****');
@@ -381,7 +381,7 @@ console.log('' == false); //true
 // Igualación estricta
 
 console.log(0 === false); //false
-console.log(null === undefine); //false
+console.log(null === undefined); //false
 console.log(null == undefined); //true
 
 
@@ -409,3 +409,143 @@ NaN -> false
 
 
 // SENTENCIA IF
+
+/*
+if (condición){
+
+}else if (condición){
+
+}else{
+
+}
+
+*/
+
+
+
+// if de linea
+if(4 > 5) console.log('Mensaje');
+
+if(4>5){
+    b = 5 + 3;
+    console.log('Mensaje');
+}
+
+
+if ('45a' / 3 ) {
+    console,log('No entró');
+}
+
+if ('0') {
+    console.log('Entró');
+}
+
+if (4/2){
+    console.log('Entró');
+}
+
+if (1){
+    console.log('Entró o no entró?');
+}
+
+let edadx;
+if (edadx){
+    console.log('Variable definida');
+}else{
+    console.log('Variable indefinida');
+}
+
+// Haga un algoritmo que dado una edad imprima true si es mayor de edad
+// false si no lo es
+
+let edad_usuario = 17;
+
+if (edad_usuario >= 18) {
+    console.log(true);
+}else{
+    console.log(false);
+}
+
+console.log(edad_usuario >= 18);
+
+
+// Operador ternario
+// condición ? operación verdadera : operación falsa
+
+resultado = edad_usuario >= 18 ? x =5 : x =7 ;
+
+// Operador lógicos
+
+// OR
+/*
+v or v = v
+v or f = v
+f or v = v
+f or f = f
+*/
+
+
+console.log ('*** Operador OR ***');
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // false
+
+if (4 == 4 || 2 > 5 ) {
+    console.log('Verdadero');
+}
+
+// resultado = valor_uno || valor_dos || valor_tres;
+// 1. evalua los operandos de izquierda a derecha.
+// 2. por cada operando, convierte el valor a booleano. Si el resultado es true.
+// 3. Sí todos los operandos han sido evaluados (todos eran falso), retorna el último operando.
+
+let comparación_booleana = true || false || true;
+comparación_booleana = '0' || '0';
+comparación_booleana = undefined || null || NaN || '';
+comparación_booleana = undefined || 'hola' || 3 || '';
+
+//Resumen: Devuelve el primer valor verdadero o el último sí todos son falsos.
+
+console.log ('*** Operador AND ***');
+console.log(true && true); // true
+console.log(true && false); // true
+console.log(false && true); // true
+console.log(false && false); // false
+
+if (4 == 4 && 2 > 5 ) {
+    console.log('Verdadero');
+}
+
+// resultado = valor_uno || valor_dos || valor_tres;
+// 1. evalua los operandos de izquierda a derecha.
+// 2. por cada operando, convierte el valor a booleano. Si el resultado es false.
+// Se detiene y retorna el valor original de ese operando.
+// 3. Sí todos los operandos han sido evaluados (todos eran verdaderos), retorna el último operando.
+
+let comparación_booleana = true && false && true;//false
+comparación_booleana = '0' && '0';//'0'
+comparación_booleana = undefined || null || NaN || '';//undefined
+comparación_booleana = undefined || 'hola' || 3 || '';//undefined
+
+// PREVALENCIA U ORDEN ENTRE OR Y AND
+
+//a && b || c && d == (a && b) || (c && d)
+
+//Negación
+
+console.log(!true);
+console.log(!false);
+console.log(!!undefined);
+
+
+// Nullish o fusión de nulos
+
+// resultado = valor_uno ?? valor_dos ?? valor_tres;
+// 1. evalua los operandos de izquierda a derecha.
+// 2. por cada operando revisa si es nulo o undefined y regresa el primero que no sea ni nulo ni undefined
+// 3. Sí todos los operandos han sido evaluados son nulos o undefined regresa el ultimo.
+
+a = null ?? undefined ?? undefined ?? null ?? 'hola' ?? null ?? 'carlos';//hola
+a = null ?? undefined ?? undefined ?? null ?? null ?? null ?? null;//null
+
