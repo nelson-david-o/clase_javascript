@@ -523,21 +523,22 @@ if (4 == 4 && 2 > 5 ) {
 // Se detiene y retorna el valor original de ese operando.
 // 3. Sí todos los operandos han sido evaluados (todos eran verdaderos), retorna el último operando.
 
+/*
 let comparación_booleana = true && false && true;//false
 comparación_booleana = '0' && '0';//'0'
 comparación_booleana = undefined || null || NaN || '';//undefined
 comparación_booleana = undefined || 'hola' || 3 || '';//undefined
-
+*/
 // PREVALENCIA U ORDEN ENTRE OR Y AND
 
 //a && b || c && d == (a && b) || (c && d)
 
 //Negación
-
+/*
 console.log(!true);
 console.log(!false);
 console.log(!!undefined);
-
+*/
 
 // Nullish o fusión de nulos
 
@@ -545,7 +546,137 @@ console.log(!!undefined);
 // 1. evalua los operandos de izquierda a derecha.
 // 2. por cada operando revisa si es nulo o undefined y regresa el primero que no sea ni nulo ni undefined
 // 3. Sí todos los operandos han sido evaluados son nulos o undefined regresa el ultimo.
-
+/*
 a = null ?? undefined ?? undefined ?? null ?? 'hola' ?? null ?? 'carlos';//hola
 a = null ?? undefined ?? undefined ?? null ?? null ?? null ?? null;//null
+*/
+
+// BUCLES WHILE Y FOR
+
+//  while (condición){}
+
+/*
+
+console.log('******');
+
+let i = 1;
+while (i <= 10) {
+    console.log(`El valor de i es: ${i}`);
+    i ++;
+}
+
+console.log('******');
+
+i = 10;
+while (i) {
+    console.log(`El valor de i es: ${i}`);
+    i --;
+}
+*/
+
+// do - while
+
+/*
+do{
+
+}while(condición){
+
+}
+*/
+/*
+i = 1;
+do{
+    console.log(`El valor de i es: ${i}`);
+    i ++;
+}while (i <= 10); {
+    
+}
+*/
+
+// Ciclo for
+
+/*
+for(comienzo; condición; incremento){
+
+}
+
+*/
+
+/*
+
+console.log('********');
+for (i = 0; i <= 10; i++) {
+    console.log(`El valor de i es: ${i}`);
+    
+}
+
+console.log('********');
+for (i = 10; i >= 10; i--) {
+    console.log(`El valor de i es: ${i}`);
+    
+}
+
+// Alcance de la variable
+let w = 0;
+for (w = 0; w <= 10; w ++) {
+   console.log(`el valor de w es ${w}`);
+    
+}
+console.log(`el valor de w por fuera es ${w}`);
+*/
+
+
+// Saltafo de partes
+/*
+console.log('*** SAltado de partes ***');
+let l = 0;
+for (; l <= 10; l ++) {
+   console.log(`el valor de l es ${l}`);
+    
+}
+w = 0;
+for (; w <= 10;) {
+   console.log(`el valor de w es ${w ++}`);
+    
+}
+*/
+
+// Break y continue
+/*
+console.log('******');
+
+w = 0;
+while (1) {
+    console.log(`El valor de w es: ${w++}`);
+    if(w == 11) break;
+}
+*/
+
+for (i=1; i<=10; i++) {
+    if (i%2 != 0) continue;
+    console.log(`${i} es un número par.`);
+    
+}
+
+// Etiqueta para break y continue
+console.log('*** etiquetas ***');
+for (i = 0; i<=0; i++){
+    for(j = 0; j <= 10; j++){
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break;
+    }
+    if (j == 2) break;
+}
+console.log('Salió');
+
+console.log('*** etiquetas ***');
+
+principal: for (i = 0; i<=0; i++){
+    for(j = 0; j <= 10; j++){
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break principal;
+    }
+}
+console.log('Salió');
+
 
